@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Page</title>
+  <style>
+      body>main{
+          width: 1511px;
+          height:728px;
+          display: flex;
+          position: relative;
+      }
+      body>main>#open{
+          height: 100%;
+          width: 100%;
+          top:100px;
+          background-image: url("assets/veiw.jpg");
+          background-size: cover;
+
+      }
+      #rout1{
+          width: 140px;
+          height: 140px;
+          border: 10px solid #1E1D1D;
+          position: absolute;
+          left:80px;
+          top: 100px;
+          border-top-color:#1BB1B1;
+          border-right-color:#1BB1B1 ;
+          border-radius:200px;
+          animation: animate 3s  normal;
+      }
+
+      #rout2{
+          width: 140px;
+          height: 140px;
+          border: 10px solid #1E1D1D ;
+          position: absolute;
+          left:80px;
+          top: 310px;
+          border-top-color:#1BB1B1;
+          border-left-color:#1BB1B1 ;
+          border-radius:200px;
+          animation: animate 3s  normal;
+      }
+      #rout3{
+          width: 140px;
+          height: 140px;
+          border: 10px solid #1E1D1D;
+          position: absolute;
+          left:80px;
+          top: 530px;
+          border-bottom-color:#1BB1B1;
+          border-top-color:#1BB1B1;
+          border-right-color:#1BB1B1 ;
+          border-radius:200px;
+          animation: animate 3s  normal;
+      }
+      @keyframes animate {
+          0%{
+              transform: rotate(0deg);
+          }
+          100%
+          {
+             transform: rotate(360deg);
+          }
+
+      }
+
+      main>#photo>#chat {
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 450px;
+          top: 180px;
+
+      }
+      main>#photo>#chat::before{
+          content: "";
+          background-image: conic-gradient(
+                  #766E6D 20deg,
+                  transparent 120deg
+          );
+          width:400px;
+          height:400px;
+          position: absolute;
+          animation: rotate 4s linear infinite;
+
+      }
+      main>#photo>#chat::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/chat.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      main>#photo>#web{
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 800px;
+          top: 180px;
+
+      }
+
+      main>#photo>#web::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/web.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      main>#photo>#car{
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 1140px;
+          top: 180px;
+
+      }
+      main>#photo>#car::before{
+          content: "";
+          background-image: conic-gradient(
+                  #766E6D 20deg,
+                  transparent 120deg
+          );
+          width:400px;
+          height:400px;
+          position: absolute;
+          animation: rotate 4s linear infinite;
+
+      }
+      main>#photo>#car::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/car.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      main>#photo>#phar{
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 450px;
+          bottom: 120px;
+
+      }
+
+      main>#photo>#phar::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/pharma.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      main>#photo>#park{
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 800px;
+          bottom: 120px;
+
+      }
+      main>#photo>#park::before{
+          content: "";
+          background-image: conic-gradient(
+                  #766E6D 20deg,
+                  transparent 120deg
+          );
+          width:400px;
+          height:400px;
+          position: absolute;
+          animation: rotate 4s linear infinite;
+
+      }
+      main>#photo>#park::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/park.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      main>#photo>#food{
+          width:290px;
+          height:150px;
+          box-shadow: 5px 5px 10px grey;
+          border-radius: 10px;
+          position: absolute;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 1140px;
+          bottom: 120px;
+
+      }
+
+      main>#photo>#food::after{
+          content: "";
+          width: 280px;
+          height: 140px;
+          background-image: url("assets/food.png");
+          position: absolute;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 20px 20px 20px #0000008c;
+          background-size: cover;
+      }
+      @keyframes rotate {
+          0%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(-360deg);
+          }
+      }
+
+      body>main>nav>ul{
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          left:700px;
+          top: 10px;
+      }
+      body>main>nav>ul>li{
+          list-style: none;
+          margin-left: 80px;
+      }
+      body>main>nav>ul>li a{
+          text-decoration: none;
+          color: white;
+          font-size:18px;
+          font-weight: bold;
+      }
+      body>main>nav>ul>li a::after{
+          content: '';
+          width: 0;
+          height: 3px;
+          background-color: #1BB1B1;
+          margin: auto;
+          display: block;
+      }
+      body>main>nav>ul>li a:hover::after{
+          width: 100%;
+          transition: width 0.3s linear;
+          margin-top: 8px;
+      }
+      body>main>nav>ul>li a:hover{
+          color: #1BB1B1;
+      }
+      .links {
+
+          padding: 12px;
+          font-size: 1.2em;
+          font-family: futura Md BT;
+          border:none;
+          outline: none;
+          width:150px;
+          color:#fff;
+          transition: 0.3s;
+
+      }
+
+      .list {
+          padding-top:5px;
+          display: flex;
+          flex-direction: column;
+          right:47px;
+          top:60px;
+          position:absolute;
+
+          transform: scaleY(0);
+
+          transform-origin: top;
+
+          transition: 0.3s;
+
+      }
+
+      .newlist {
+
+          transform: scaleY(1);
+
+      }
+
+      .links {
+          background-color:darkgrey;
+          opacity:.7;
+      }
+
+      .links:hover {
+          background-color: #01579B;
+          cursor: pointer;
+
+      }
+      main>h1{
+          position: absolute;
+
+          font-family: "Arial Black";
+          font-weight: bold;
+          color: #766E6D;
+      }
+      main>#rh1{
+          left: 130px;
+          top: 150px;
+          font-size:20px ;
+      }
+      main>#rh2{
+          left: 130px;
+          top: 360px;
+          font-size:20px ;
+      }
+      main>#rh3{
+          left: 130px;
+          top: 570px;
+          font-size:20px ;
+      }
+      main>#lh1{
+          left: 460px;
+          top: 135px;
+          font-size:15px ;
+      }
+      main>#lh2{
+          left: 810px;
+          top: 135px;
+          font-size:15px ;
+      }
+      main>#lh3{
+          left: 1150px;
+          top: 135px;
+          font-size:15px ;
+      }
+      main>#lh4{
+          left: 460px;
+          bottom:270px;
+          font-size:15px ;
+      }
+      main>#lh5{
+          left: 810px;
+          bottom:270px;
+          font-size:15px ;
+      }
+      main>#lh6{
+          left: 1150px;
+          bottom:270px;
+          font-size:15px ;
+      }
+      #script>#scrA{
+          position: absolute;
+          color:white;
+          width: 150px;
+          height: 150px;
+          left: 260px;
+          top: 100px;
+      }
+      #script>#scrB{
+          position: absolute;
+          color:white;
+          width: 150px;
+          height: 150px;
+          left: 260px;
+          top: 320px;
+      }
+      #script>#scrC{
+          position: absolute;
+          color:white;
+          width: 150px;
+          height: 200px;
+          left: 260px;
+          top: 500px;
+      }
+      #script>#scrE{
+          position: absolute;
+           background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 480px;
+          top: 360px;
+      }
+      #script>#scrF{
+          position: absolute;
+          background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 830px;
+          top: 360px;
+      }
+      #script>#scrG{
+          position: absolute;
+          background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 1170px;
+          top: 360px;
+      }
+      #script>#scrH{
+          position: absolute;
+          background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 480px;
+          bottom: 40px;
+      }
+      #script>#scrI{
+          position: absolute;
+          background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 830px;
+          bottom: 40px;
+      }
+      #script>#scrJ{
+          position: absolute;
+          background-color: red;
+          width: 230px;
+          height: 50px;
+          left: 1170px;
+          bottom: 40px;
+      }
+  </style>
+</head>
+<body>
+    <main>
+        <div id="open"></div>
+        <section id="rout1"></section>
+        <section id="rout2"></section>
+        <section id="rout3"></section>
+        <h1 id="rh1">JAVA</h1>
+        <h1 id="rh2">DBMS</h1>
+        <h1 id="rh3">HTML<br>C S S<br></h1>
+        <h1 id="lh1">Live Chat</h1>
+        <h1 id="lh2">Web Phage</h1>
+        <h1 id="lh3">Car Parking</h1>
+        <h1 id="lh4">Pharmacy System</h1>
+        <h1 id="lh5">Supermarket</h1>
+        <h1 id="lh6">Poss System</h1>
+        <section id="photo">
+            <div id="chat"></div>
+            <div id="web"></div>
+            <div id="car"></div>
+            <div id="phar"></div>
+            <div id="park"></div>
+            <div id="food"></div>
+        </section>
+        <section id="script">
+            <div id="scrA">
+                <p>Studding from 2020 in IJSE Institute from Srilanka.I have good skill in JAVA and I followed some courses about JAVA.</p>
+            </div>
+            <div id="scrB">
+                <p>DBMS is the most Important part of the programming.I got a basic knowledge about it in IJSE.I have some programs with DBMS.</p>
+            </div>
+            <div id="scrC">
+                <p>CSS & HTML is the my favorite part in programming.I trust,I have good skill and good practise in CSS/HTML.
+                    I have some good works in it.I like & hope to improve my Knowledge in that part.</p>
+            </div>
+            <div id="scrE"></div>
+            <div id="scrF"></div>
+            <div id="scrG"></div>
+            <div id="scrH"></div>
+            <div id="scrI"></div>
+            <div id="scrJ"></div>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li class="click"><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="list">
+
+            <a href="#"><button class="links">Facebook</button></a>
+
+            <a href="#"><button class="links">Instargram</button></a>
+
+            <button class="links">Git Hub</button>
+            <button class="links">Linked In</button>
+
+        </div>
+
+        <script>
+
+            let click = document.querySelector('.click');
+
+            let list = document.querySelector('.list');
+
+            click.addEventListener("click",()=>{
+
+                list.classList.toggle('newlist');
+
+            });
+
+        </script>
+
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dd</title>
+  <style>
+
+    div {
+      width: 300px;
+      height: 200px;
+      box-shadow: 16px 14px 20px #0000008c;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+    div::before{
+      content: "";
+      background-image: conic-gradient(
+              #ff0052 20deg,
+              transparent 120deg
+      );
+      width:400px;
+      height:400px;
+      position: absolute;
+      animation: rotate 4s linear infinite;
+    }
+    div::after{
+      content: "";
+      width: 290px;
+      height: 190px;
+        background-image: url("assets/chat.png");
+      position: absolute;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      box-shadow: inset 20px 20px 20px #0000008c;
+    }
+    @keyframes rotate {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+   <div></div>
+</body>
+</html>

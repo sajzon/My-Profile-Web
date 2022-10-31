@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body>main{
+            width: 1511px;
+            height:728px;
+            display: flex;
+            position: relative;
+        }
+        body>main>div:nth-child(1){
+            height: 100%;
+            width: 100%;
+            top:100px;
+            background-image: url("assets/ccc.jpg");
+            background-size: cover;
+
+        }
+        body>main>div:nth-child(2){
+           height: 330px;
+            width:230px;
+            background-color:#766E6D ;
+            border-radius: 10px;
+            position: absolute;
+            left:150px;
+            top: 140px;
+        }
+        body>main>div:nth-child(3){
+            height: 330px;
+            width:230px;
+            border: 3px solid white;
+            border-radius: 10px;
+            position: absolute;
+            left:170px;
+            top: 160px;
+            background-image: url("assets/my.jpg");
+            background-size: cover;
+        }
+        body>main>#s{
+            position:absolute;
+            font-size:55px;
+            left:500px;
+            top:250px;
+            list-style: none;
+            font-family:"Arial Black";
+            color:#766E6D ;
+
+        }
+        body>main>#ss{
+            position:absolute;
+            font-size:55px;
+            left:650px;
+            top:250px;
+            list-style: none;
+            font-family:"Arial Black";
+            color:#766E6D;
+
+        }
+        body>main>#b{
+            position:absolute;
+            font-size:33px;
+            left:540px;
+            top:275px;
+            list-style: none;
+            font-family:"Arial Black";
+            color: white;
+
+        }
+        body>main>#bb{
+            position:absolute;
+            font-size:33px;
+            left:690px;
+            top:275px;
+            list-style: none;
+            font-family:"Arial Black";
+            color: white;
+
+        }
+        body>main>#hello{
+            position:absolute;
+            font-size:25px;
+            left:500px;
+            top:160px;
+            list-style: none;
+            font-family:"Arial Black";
+            color:darkgrey;
+
+        }
+        body>main>#i{
+            position:absolute;
+            font-size:55px;
+            left:500px;
+            top:190px;
+            list-style: none;
+            font-family:"Arial Black";
+            color: white;
+
+        }
+        body>main>#m{
+            position:absolute;
+            font-size:33px;
+            left:540px;
+            top:215px;
+            list-style: none;
+            font-family:"Arial Black";
+            color: white;
+
+        }
+        body>main>.text>h1{
+            position:absolute;
+            font-family: bignoodletitling;
+            left:500px;
+            top:325px;
+            color: white;
+        }
+        body>main>.text>h1:before{
+            content: 'Developer And Designer';
+            font-size:40px;
+            animation: animate 10s infinite;
+        }
+        @keyframes animate {
+            0%{
+                font-size:40px;
+                opacity: 1;
+
+            }
+            25%{
+                font-size:30px;
+                opacity: 0;
+            }
+            50%{
+                font-size: 40px;
+                opacity: 1;
+                content: 'Creative And Innovative';
+            }
+            65%{
+                font-size:30px;
+                opacity: 0;
+            }
+            80%{
+                font-size:40px;
+                opacity: 1;
+                content: 'Honest And Trustworthy';
+            }
+            90%{
+                font-size:30px;
+                opacity: 0;
+            }
+            100%{
+                font-size:40px;
+                opacity: 1;
+
+            }
+
+        }
+        body>main>section{
+            position:absolute;
+            font-family: bignoodletitling;
+            left:680px;
+            top:425px;
+            color: white;
+            list-style: none;
+            font-size:18px;
+        }
+        body>main>#call{
+            position: absolute;
+            height:40px;
+            width: 130px;
+            background-color: darkcyan;
+            color: white;
+            font-size:15px;
+            font-weight: bold;
+            left: 680px;
+            bottom:180px;
+            border-radius: 20px;
+        }
+        body>main>#call:hover{
+            cursor: pointer;
+            background-color: #1BB1B1;
+            color: #766E6D;
+        }
+        body>main>nav>ul{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left:700px;
+            top: 10px;
+        }
+        body>main>nav>ul>li{
+            list-style: none;
+            margin-left: 80px;
+        }
+        body>main>nav>ul>li a{
+            text-decoration: none;
+            color: white;
+            font-size:18px;
+            font-weight: bold;
+        }
+        body>main>nav>ul>li a::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #1BB1B1;
+            margin: auto;
+            display: block;
+        }
+        body>main>nav>ul>li a:hover::after{
+            width: 100%;
+            transition: width 0.3s linear;
+            margin-top: 8px;
+        }
+        body>main>nav>ul>li a:hover{
+            color: #1BB1B1;
+        }
+        .links {
+
+            padding: 12px;
+            font-size: 1.2em;
+            font-family: futura Md BT;
+            border:none;
+            outline: none;
+            width:150px;
+            color:#fff;
+            transition: 0.3s;
+
+        }
+
+        .list {
+            padding-top:5px;
+            display: flex;
+            flex-direction: column;
+            right:47px;
+            top:60px;
+            position:absolute;
+
+            transform: scaleY(0);
+
+            transform-origin: top;
+
+            transition: 0.3s;
+
+        }
+
+        .newlist {
+
+            transform: scaleY(1);
+
+        }
+
+        .links {
+            background-color:darkgrey;
+            opacity:.7;
+        }
+
+        .links:hover {
+            background-color: #01579B;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+     <main>
+         <div></div>
+         <div></div>
+         <div></div>
+         <li id="s">S</li>
+         <li id="ss">S</li>
+         <li id="b">ajith</li>
+         <li id="bb">andakelum</li>
+         <li id="hello">Hello ,</li>
+         <li id="i">I'</li>
+         <li id="m">m</li>
+         <div class="text">
+             <h1></h1>
+         </div>
+         <section>
+             <li>I am a UX/UX designer and developer</li>
+             <li>work with personal style and content</li>
+             <li>creator based in the Sri Lanka.</li>
+         </section>
+         <button id="call">Contact Me</button>
+         <nav>
+             <ul>
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">Portfolio</a></li>
+                 <li><a href="#">Gallery</a></li>
+                 <li class="click"><a href="#">Contact</a></li>
+
+             </ul>
+         </nav>
+         <div class="list">
+
+             <a href="#"><button class="links">Facebook</button></a>
+
+             <a href="#"><button class="links">Instargram</button></a>
+
+             <button class="links">Git Hub</button>
+             <button class="links">Linked In</button>
+
+         </div>
+
+         <script>
+
+             let click = document.querySelector('.click');
+
+             let list = document.querySelector('.list');
+
+             click.addEventListener("click",()=>{
+
+                 list.classList.toggle('newlist');
+
+             });
+
+         </script>
+     </main>
+</body>
+</html>
